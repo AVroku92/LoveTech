@@ -1,0 +1,269 @@
+<!-- Mohammed Motia Hassan Al-Ekhwan 1948713
+
+Rakan Adel Makhashin 2040212
+
+Mohammed Hassan Al-Zahrani 2040316 -->
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" >
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" >
+        <meta
+            name="description"
+            content="Shop now with us at LoveBuy.com, look for new electronics, low prices. Big sales! up to 70%"
+        >
+        <meta
+            name="keywords"
+            content="online ecommerce, online shopping site, creative buy platform, Amazon, noon, creative cloths, electronic, ui ux"
+        >
+        <!-- CSS -->
+        <link rel="stylesheet" href="css/style.css" >
+        <!-- Javascript -->
+        <script src="js/javascript.js"></script>
+        <!-- font -->
+        <link
+            href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&family=Playfair+Display&family=Poppins:wght@200;400;700&display=swap"
+            rel="stylesheet"
+        >
+
+        <title>LoveBuy</title>
+    </head>
+    <body>
+        <div class="wrapper">
+            <header>
+                <nav id="nav">
+                    <!-- website logo -->
+                    <article id="logo-container">
+                        <img
+                            src="Media/logo.png"
+                            alt="Logo of the LoveBuy website"
+                        >
+                        <p>LoveBuy</p>
+                    </article>
+                    <!-- search bar here -->
+
+                    <!-- navigation -->
+
+                    <article id="header-right">
+                        <a href="index.html" class="active links">Home</a>
+                        <a href="Catagories.html" class="links">Catagories</a>
+                        <a href="Signup.html" class="links">Sign up</a>
+                        <a href="Contact-us.html" class="links">Contact us</a>
+
+                        <a href="" id="wishlist"
+                            ><img
+                                class="wishlist-nonfilled"
+                                src="Media/wishlist.png"
+                                alt="" /><img
+                                class="wishlist-filled"
+                                src="Media/wishlist-filled.png"
+                                alt=""
+                        ></a>
+                        <a href="Cart.html" id="cart"
+                            ><img
+                                class="cart-nonfilled"
+                                src="Media/cart.png"
+                                alt="" /><img
+                                class="cart-filled"
+                                src="Media/cart-filled.png"
+                                alt=""
+                        ></a>
+
+                        <img
+                            id="menu"
+                            src="Media/menu.png"
+                            alt=""
+                            onclick="showMenu()"
+                        >
+
+                        <ul id="menu-aside">
+                            <li>
+                                <a href="index.html" class="active menu-links"
+                                    >Home</a
+                                >
+                            </li>
+                            <li>
+                                <a href="Catagories.html" class="menu-links"
+                                    >Catagories</a
+                                >
+                            </li>
+                            <li>
+                                <a href="Signup.html" class="menu-links"
+                                    >Sign up</a
+                                >
+                            </li>
+                            <li>
+                                <a href="Contact-us.html" class="menu-links"
+                                    >Contact us</a
+                                >
+                            </li>
+                        </ul>
+                    </article>
+                </nav>
+            </header>
+
+            <section onclick="hideMenu()">
+                <article class="contact-us-container">
+                    <form class="contact-us-form" method="get">
+                        <h2 class="Lovetohear">
+                            Love to hear from you, <br />Get in touch 👋
+                        </h2>
+                        <br /><br />
+                        <div class="devide firstAndlast-row">
+                            <div class="left-form">
+                                <!-- <label for="firstName">First Name</label> -->
+                                <input
+                                    type="text"
+                                    id="firstname"
+                                    name="firstname"
+                                    placeholder="First Name"
+                                    maxlength="20"
+                                    minlength="2"
+                                    required
+                                >
+                            </div>
+                            <div class="right-form">
+                                <!-- <label for="lastName" id="lastname-label">Last Name</label> -->
+                                <input
+                                    type="text"
+                                    id="lastname"
+                                    name="lastname"
+                                    placeholder="Last Name"
+                                    minlength="3"
+                                    maxlength="20"
+                                    required
+                                >
+                            </div>
+                        </div>
+
+                        <br />
+
+                        <div class="devide genderAndmobile-row">
+                            <div class="left-form">
+                                <!-- <label for="gender">Gender</label> -->
+                                <select name="gender" id="gender">
+                                    <option
+                                        value="Gender"
+                                        disabled
+                                        selected
+                                        hidden
+                                    >
+                                        Gender
+                                    </option>
+                                    <option value="male">Male</option>
+                                    <option value="female">Female</option>
+                                    <option value="other">Other</option>
+                                </select>
+                            </div>
+
+                            <div class="right-form">
+                                <!-- <label for="mobile">Mobile</label> -->
+                                <input
+                                    type="text"
+                                    name="mobile"
+                                    id="mobile"
+                                    placeholder="Phone E.g., 052XXXXXXX"
+                                    maxlength="10"
+                                    minlength="10"
+                                    pattern="[0-9]{10}"
+                                    required
+                                >
+                            </div>
+                        </div>
+                        <br />
+
+                        <div class="devide dateAndemail-row">
+                            <div class="left-form">
+                                <!-- <label for="date">Date of Birth</label> -->
+                                <input type="text" name="date" id="date" required onfocus="(this.type='date'),(this.showPicker())" placeholder="Date of Birth" onblur="(this.type='text')"/>
+                            </div>
+
+                            <div class="right-form">
+                                <!-- <label for="email-contact-us">Email Address</label> -->
+                                <input
+                                    type="email"
+                                    name="email"
+                                    id="email-contact-us"
+                                    placeholder="Email Address"
+                                    required
+                                    pattern="[a-zA-Z0-9-_\.]+@[a-zA-Z]+\.[a-zA-Z]{2,4}"
+                                >
+                            </div>
+                        </div>
+
+                        <br />
+                        <br />
+
+                        <div class="width-100 language-row">
+                            <p>Choose a language to communicate with</p>
+                            <br />
+                            <div class="radio-design">
+                                <label for="english">English</label>
+                                <input
+                                    type="radio"
+                                    name="language"
+                                    id="english"
+                                    required
+                                >
+                            </div>
+                            <div class="radio-design">
+                                <label for="arabic">Arabic</label>
+                                <input
+                                    type="radio"
+                                    name="language"
+                                    id="arabic"
+                                >
+                            </div>
+                            <div class="radio-design">
+                                <label for="spanish">Spanish</label>
+                                <input
+                                    type="radio"
+                                    name="language"
+                                    id="spanish"
+                                />
+                            </div>
+                        </div>
+                        <br /><br />
+                        <div class="width-100 subject-row">
+                            <!-- <label for="subject">Subject</label> -->
+
+                            <input
+                                type="text"
+                                name="subject"
+                                id="subject"
+                                placeholder="Subject"
+                                minlength="3"
+                                maxlength="20"
+                                required
+                            >
+                        </div>
+                        <br />
+                        <br />
+                        <div class="width-100 comment-row">
+                            <!-- <label for="comment">Comment</label> -->
+                            <textarea
+                                placeholder="Write Your Comment Here"
+                                name="comment"
+                                id="comment"
+                                cols="60"
+                                rows="7"
+                                maxlength="600"
+                                minlength="10"
+                                required
+                            ></textarea>
+                        </div>
+
+                        <div class="width-100 center-submit">
+                            <input
+                                type="submit"
+                                value="Send Message"
+                                id="submit-contact-us"
+                            >
+                        </div>
+                    </form>
+                </article>
+            </section>
+        </div>
+    </body>
+</html>
