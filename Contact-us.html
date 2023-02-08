@@ -7,29 +7,51 @@ Mohammed Hassan Al-Zahrani 2040316 -->
 <html lang="en">
     <head>
         <meta charset="UTF-8" />
-        <meta http-equiv="X-UA-Compatible" content="IE=edge" >
-        <meta name="viewport" content="width=device-width, initial-scale=1.0" >
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <meta
             name="description"
             content="Shop now with us at LoveBuy.com, look for new electronics, low prices. Big sales! up to 70%"
-        >
+        />
         <meta
             name="keywords"
             content="online ecommerce, online shopping site, creative buy platform, Amazon, noon, creative cloths, electronic, ui ux"
-        >
+        />
         <!-- CSS -->
-        <link rel="stylesheet" href="css/style.css" >
+        <link rel="stylesheet" href="css/style.css" />
         <!-- Javascript -->
-        <script src="js/javascript.js"></script>
+        <script src="js/javascript.js" defer></script>
+        <script src="js/frontend.js" defer></script>
         <!-- font -->
         <link
             href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&family=Playfair+Display&family=Poppins:wght@200;400;700&display=swap"
             rel="stylesheet"
-        >
+        />
 
         <title>LoveBuy</title>
     </head>
     <body>
+        <section class="alert-section">
+            <div id="hide-alert"></div>
+            <div class="alert-div">
+                <img
+                    id="close-oops"
+                    src="media/xButton.png"
+                    alt="an x button"
+                />
+                <p class="oops">
+                    oops!
+                    <img
+                        class="oops-img"
+                        src="media/oops.png"
+                        alt="embarrassed emoji"
+                    />
+                </p>
+                <p class="component-name">First Name</p>
+                <ul class="issues-list"></ul>
+            </div>
+        </section>
+
         <div class="wrapper">
             <header>
                 <nav id="nav">
@@ -38,7 +60,7 @@ Mohammed Hassan Al-Zahrani 2040316 -->
                         <img
                             src="Media/logo.png"
                             alt="Logo of the LoveBuy website"
-                        >
+                        />
                         <p>LoveBuy</p>
                     </article>
                     <!-- search bar here -->
@@ -59,7 +81,7 @@ Mohammed Hassan Al-Zahrani 2040316 -->
                                 class="wishlist-filled"
                                 src="Media/wishlist-filled.png"
                                 alt=""
-                        ></a>
+                        /></a>
                         <a href="Cart.html" id="cart"
                             ><img
                                 class="cart-nonfilled"
@@ -68,14 +90,14 @@ Mohammed Hassan Al-Zahrani 2040316 -->
                                 class="cart-filled"
                                 src="Media/cart-filled.png"
                                 alt=""
-                        ></a>
+                        /></a>
 
                         <img
                             id="menu"
                             src="Media/menu.png"
                             alt=""
                             onclick="showMenu()"
-                        >
+                        />
 
                         <ul id="menu-aside">
                             <li>
@@ -105,6 +127,7 @@ Mohammed Hassan Al-Zahrani 2040316 -->
 
             <section onclick="hideMenu()">
                 <article class="contact-us-container">
+                    <!-- form -->
                     <form class="contact-us-form" method="get">
                         <h2 class="Lovetohear">
                             Love to hear from you, <br />Get in touch 👋
@@ -121,7 +144,7 @@ Mohammed Hassan Al-Zahrani 2040316 -->
                                     maxlength="20"
                                     minlength="2"
                                     required
-                                >
+                                />
                             </div>
                             <div class="right-form">
                                 <!-- <label for="lastName" id="lastname-label">Last Name</label> -->
@@ -133,7 +156,7 @@ Mohammed Hassan Al-Zahrani 2040316 -->
                                     minlength="3"
                                     maxlength="20"
                                     required
-                                >
+                                />
                             </div>
                         </div>
 
@@ -166,9 +189,9 @@ Mohammed Hassan Al-Zahrani 2040316 -->
                                     placeholder="Phone E.g., 052XXXXXXX"
                                     maxlength="10"
                                     minlength="10"
-                                    pattern="[0-9]{10}"
+                                    pattern="[0]{1}[5]{1}[0-9]{8}"
                                     required
-                                >
+                                />
                             </div>
                         </div>
                         <br />
@@ -176,7 +199,15 @@ Mohammed Hassan Al-Zahrani 2040316 -->
                         <div class="devide dateAndemail-row">
                             <div class="left-form">
                                 <!-- <label for="date">Date of Birth</label> -->
-                                <input type="text" name="date" id="date" required onfocus="(this.type='date'),(this.showPicker())" placeholder="Date of Birth" onblur="(this.type='text')"/>
+                                <input
+                                    type="text"
+                                    name="date"
+                                    id="date"
+                                    required
+                                    onfocus="(this.type='date'),(this.showPicker())"
+                                    placeholder="Date of Birth"
+                                    onblur="(this.type='text')"
+                                />
                             </div>
 
                             <div class="right-form">
@@ -187,8 +218,8 @@ Mohammed Hassan Al-Zahrani 2040316 -->
                                     id="email-contact-us"
                                     placeholder="Email Address"
                                     required
-                                    pattern="[a-zA-Z0-9-_\.]+@[a-zA-Z]+\.[a-zA-Z]{2,4}"
-                                >
+                                    pattern="[a-zA-Z0-9-_\.]+@[a-zA-Z]+[.]{1}[a-zA-Z]{2,4}"
+                                />
                             </div>
                         </div>
 
@@ -205,7 +236,7 @@ Mohammed Hassan Al-Zahrani 2040316 -->
                                     name="language"
                                     id="english"
                                     required
-                                >
+                                />
                             </div>
                             <div class="radio-design">
                                 <label for="arabic">Arabic</label>
@@ -213,7 +244,7 @@ Mohammed Hassan Al-Zahrani 2040316 -->
                                     type="radio"
                                     name="language"
                                     id="arabic"
-                                >
+                                />
                             </div>
                             <div class="radio-design">
                                 <label for="spanish">Spanish</label>
@@ -236,7 +267,7 @@ Mohammed Hassan Al-Zahrani 2040316 -->
                                 minlength="3"
                                 maxlength="20"
                                 required
-                            >
+                            />
                         </div>
                         <br />
                         <br />
@@ -259,7 +290,7 @@ Mohammed Hassan Al-Zahrani 2040316 -->
                                 type="submit"
                                 value="Send Message"
                                 id="submit-contact-us"
-                            >
+                            />
                         </div>
                     </form>
                 </article>
