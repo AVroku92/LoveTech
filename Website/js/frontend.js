@@ -9,7 +9,7 @@ if(form != null)
     //first name
     {
     let messages = []
-
+    const firstname = document.querySelector("#firstname").value.trim();    
     if(isEmpty("#firstname")){
         messages.push("- Field is empty");
         
@@ -19,6 +19,11 @@ if(form != null)
         if(!checkLength("#firstname",2,20)){
             messages.push("- Length must be between 2-20");  
         }
+
+    
+        if(!firstname.match("[a-zA-Z]+")){
+            messages.push("- First name must match the right format");
+        }  
     
     if(!checkType("#firstname","text")){
         messages.push("- Type must be text");
@@ -36,7 +41,7 @@ if(form != null)
     //last name
     {
         let messages = []
-    
+        const lastname = document.querySelector("#lastname").value.trim();   
         if(isEmpty("#lastname")){
             messages.push("- Field is empty");
             
@@ -46,6 +51,10 @@ if(form != null)
             if(!checkLength("#lastname",2,20)){
                 messages.push("- Length must be between 2-20");  
             }
+
+        if(!lastname.match("[a-zA-Z]+")){
+            messages.push("- Last name must match the right format");
+        }     
         
         if(!checkType("#lastname","text")){
             messages.push("- Type must be text");

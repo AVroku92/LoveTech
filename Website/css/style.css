@@ -1273,5 +1273,11 @@ td:hover {
         .Item-quantity {
             font-size: 1em;
         }
+
+        .alert-div{
+            width: 330px;
+            height: 400px;
+            
+        }
     }
 }

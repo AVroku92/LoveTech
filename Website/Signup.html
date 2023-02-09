@@ -131,7 +131,7 @@ Mohammed Hassan Al-Zahrani 2040316 -->
                 <article class="flip-card">
                     <article class="flip-card-inner">
                         <article class="front-card">
-                            <form id="signupForm" class="form" method="post">
+                            <form id="signupForm" class="form" action="/signupProcess" method="post">
                                 <h1 class="signup-h1">Create your account</h1>
 
                                 <input
@@ -175,7 +175,7 @@ Mohammed Hassan Al-Zahrani 2040316 -->
                                     type="submit"
                                     id="signup"
                                     value="Sign up"
-                            
+                                    formnovalidate
                                 />
                                 <br /><br />
                                 <p>
@@ -188,7 +188,7 @@ Mohammed Hassan Al-Zahrani 2040316 -->
                         </article>
 
                         <article class="back-card">
-                            <form id="loginForm" class="form" method="post">
+                            <form id="loginForm" class="form" action="/loginProcess" method="post">
                                 <h1 class="login-h1">Welcome Back</h1>
 
                                 <input
@@ -214,7 +214,7 @@ Mohammed Hassan Al-Zahrani 2040316 -->
                                 </div>
                                 <br />
                                 <br />
-                                <button type="submit" id="login" value="Login">
+                                <button type="submit" id="login" value="Login" formnovalidate>
                                     Login
                                 </button>
                                 <br /><br />

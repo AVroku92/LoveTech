@@ -128,7 +128,7 @@ Mohammed Hassan Al-Zahrani 2040316 -->
             <section onclick="hideMenu()">
                 <article class="contact-us-container">
                     <!-- form -->
-                    <form class="contact-us-form" method="get">
+                    <form class="contact-us-form" method="post" action="/contactProcess">
                         <h2 class="Lovetohear">
                             Love to hear from you, <br />Get in touch 👋
                         </h2>
@@ -143,6 +143,7 @@ Mohammed Hassan Al-Zahrani 2040316 -->
                                     placeholder="First Name"
                                     maxlength="20"
                                     minlength="2"
+                                    pattern="[a-zA-Z]+"
                                     required
                                 />
                             </div>
@@ -153,8 +154,9 @@ Mohammed Hassan Al-Zahrani 2040316 -->
                                     id="lastname"
                                     name="lastname"
                                     placeholder="Last Name"
-                                    minlength="3"
+                                    minlength="2"
                                     maxlength="20"
+                                    pattern="[a-zA-Z]+"
                                     required
                                 />
                             </div>
@@ -235,6 +237,7 @@ Mohammed Hassan Al-Zahrani 2040316 -->
                                     type="radio"
                                     name="language"
                                     id="english"
+                                    value="english"
                                     required
                                 />
                             </div>
@@ -244,6 +247,7 @@ Mohammed Hassan Al-Zahrani 2040316 -->
                                     type="radio"
                                     name="language"
                                     id="arabic"
+                                    value="arabic"
                                 />
                             </div>
                             <div class="radio-design">
@@ -252,6 +256,7 @@ Mohammed Hassan Al-Zahrani 2040316 -->
                                     type="radio"
                                     name="language"
                                     id="spanish"
+                                    value="spanish"
                                 />
                             </div>
                         </div>
@@ -290,6 +295,7 @@ Mohammed Hassan Al-Zahrani 2040316 -->
                                 type="submit"
                                 value="Send Message"
                                 id="submit-contact-us"
+                                formnovalidate
                             />
                         </div>
                     </form>
