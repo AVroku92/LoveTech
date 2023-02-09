@@ -1,0 +1,236 @@
+<!-- Mohammed Motia Hassan Al-Ekhwan 1948713
+
+Rakan Adel Makhashin 2040212
+
+Mohammed Hassan Al-Zahrani 2040316 -->
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <meta
+            name="description"
+            content="Shop now with us at LoveBuy.com, look for new electronics, low prices. Big sales! up to 70%"
+        />
+        <meta
+            name="keywords"
+            content="online ecommerce, online shopping site, creative buy platform, Amazon, noon, creative cloths, electronic, ui ux"
+        />
+        <!-- CSS -->
+        <link rel="stylesheet" href="css/style.css" />
+        <!-- Javascript -->
+        <script src="js/javascript.js" defer></script>
+        <script src="js/frontend.js" defer></script>
+        <!-- font -->
+        <link
+            href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&family=Playfair+Display&family=Poppins:wght@200;400;700&display=swap"
+            rel="stylesheet"
+        />
+
+        <title>LoveBuy</title>
+    </head>
+    <body>
+        <section class="alert-section">
+            <div id="hide-alert"></div>
+            <div class="alert-div">
+                <img
+                    id="close-oops"
+                    src="media/xButton.png"
+                    alt="an x button"
+                />
+                <p class="oops">
+                    oops!
+                    <img
+                        class="oops-img"
+                        src="media/oops.png"
+                        alt="embarrassed emoji"
+                    />
+                </p>
+                <p class="component-name">First Name</p>
+                <ul class="issues-list"></ul>
+            </div>
+        </section>
+
+        <div class="wrapper">
+            <header>
+                <nav id="nav">
+                    <!-- website logo -->
+                    <article id="logo-container">
+                        <img
+                            src="Media/logo.png"
+                            alt="Logo of the LoveBuy website"
+                        />
+                        <p>LoveBuy</p>
+                    </article>
+                    <!-- search bar here -->
+
+                    <!-- navigation -->
+
+                    <article id="header-right">
+                        <a href="index.html" class="active links">Home</a>
+                        <a href="Catagories.html" class="links">Catagories</a>
+                        <a href="Signup.html" class="links">Sign up</a>
+                        <a href="Contact-us.html" class="links">Contact us</a>
+
+                        <a href="" id="wishlist"
+                            ><img
+                                class="wishlist-nonfilled"
+                                src="Media/wishlist.png"
+                                alt="" /><img
+                                class="wishlist-filled"
+                                src="Media/wishlist-filled.png"
+                                alt=""
+                        /></a>
+                        <a href="Cart.html" id="cart"
+                            ><img
+                                class="cart-nonfilled"
+                                src="Media/cart.png"
+                                alt="" /><img
+                                class="cart-filled"
+                                src="Media/cart-filled.png"
+                                alt=""
+                        /></a>
+
+                        <img
+                            id="menu"
+                            src="Media/menu.png"
+                            alt=""
+                            onclick="showMenu()"
+                        />
+
+                        <ul id="menu-aside">
+                            <li>
+                                <a href="index.html" class="active menu-links"
+                                    >Home</a
+                                >
+                            </li>
+                            <li>
+                                <a href="Catagories.html" class="menu-links"
+                                    >Catagories</a
+                                >
+                            </li>
+                            <li>
+                                <a href="Signup.html" class="menu-links"
+                                    >Sign up</a
+                                >
+                            </li>
+                            <li>
+                                <a href="Contact-us.html" class="menu-links"
+                                    >Contact us</a
+                                >
+                            </li>
+                        </ul>
+                    </article>
+                </nav>
+            </header>
+
+            <section class="form-container" onclick="hideMenu()">
+                <img src="Media/welcome.svg" alt="" />
+
+                <article class="flip-card">
+                    <article class="flip-card-inner">
+                        <article class="front-card">
+                            <form id="signupForm" class="form" method="post">
+                                <h1 class="signup-h1">Create your account</h1>
+
+                                <input
+                                    type="text"
+                                    name="username"
+                                    id="username"
+                                    placeholder="Username"
+                                    minlength="2"
+                                    maxlength="20"
+                                />
+
+                                <br />
+                                <br />
+
+                                <input
+                                    type="email"
+                                    name="email"
+                                    id="email"
+                                    placeholder="Email Address"
+                                    pattern="[a-zA-Z0-9-_\.]+@[a-zA-Z]+[.]{1}[a-zA-Z]{2,4}"
+                                />
+
+                                <br />
+                                <br />
+
+                                <input
+                                    type="password"
+                                    name="password"
+                                    id="password"
+                                    placeholder="Password"
+                                    pattern="^(?=.*[a-z])(?=.*[A-Z])(?=.*[0-9])(?=.*[!@#$%^&*_=+-]).{8,30}$"
+
+                                />
+
+                                <br />
+                                <br />
+                                <br />
+                                <br />
+                                <br />
+                                <input
+                                    type="submit"
+                                    id="signup"
+                                    value="Sign up"
+                            
+                                />
+                                <br /><br />
+                                <p>
+                                    Already have an account?
+                                    <a onclick="flip()" class="login-underline"
+                                        >Login!</a
+                                    >
+                                </p>
+                            </form>
+                        </article>
+
+                        <article class="back-card">
+                            <form id="loginForm" class="form" method="post">
+                                <h1 class="login-h1">Welcome Back</h1>
+
+                                <input
+                                    type="email"
+                                    name="email"
+                                    id="email-login"
+                                    placeholder="Email Address"
+                                />
+
+                                <br />
+                                <br />
+
+                                <input
+                                    type="password"
+                                    name="password"
+                                    id="password-login"
+                                    placeholder="Password"
+                                />
+
+                                <br />
+                                <div class="forget login-forget">
+                                    <a href="">Forget password?</a>
+                                </div>
+                                <br />
+                                <br />
+                                <button type="submit" id="login" value="Login">
+                                    Login
+                                </button>
+                                <br /><br />
+                                <p>
+                                    New to LoveTech?
+                                    <a
+                                        onclick="flipBack()"
+                                        class="signup-underline"
+                                        >Sign up!</a
+                                    >
+                                </p>
+                            </form>
+                        </article>
+                    </article>
+                </article>
+            </section>
+        </div>
+    </body>
+</html>

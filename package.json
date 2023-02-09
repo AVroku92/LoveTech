@@ -1,0 +1,25 @@
+{
+  "name": "project",
+  "version": "1.0.0",
+  "description": "",
+  "main": "backend.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/AVroku92/LoveTech.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/AVroku92/LoveTech/issues"
+  },
+  "homepage": "https://github.com/AVroku92/LoveTech#readme",
+  "dependencies": {
+    "express": "^4.18.2",
+    "express-validator": "^6.14.3",
+    "mysql2": "^3.1.2"
+  }
+}
