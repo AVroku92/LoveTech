@@ -13,6 +13,8 @@ function stoploading(){
     setTimeout("loading()", 1000);
 }
 
+
+
 function loading(){
 
     var loading_screen = document.getElementsByClassName("loading-screen");
@@ -36,3 +38,57 @@ function flipBack(){
     flip_card[0].style.transform = "rotateY(0deg)";
 }
 
+
+
+//catagories javascript
+var cards = ["laptop-card","smartphone-card"]
+var types = ["laptop","smartphone"]
+
+document.querySelector(".laptop-card").addEventListener("click",function(){
+
+    for(card in cards){
+        if(cards[card]== "laptop-card"){
+            document.querySelector("."+cards[card]).className = document.querySelector("."+cards[card]).className + " active-card";
+        }
+        else{
+            document.querySelector("."+cards[card]).className = document.querySelector("."+cards[card]).className.replace("active-card","")
+        }
+    }
+    
+    var laptops = document.getElementsByClassName("laptop");
+    for(var i = 0;i<laptops.length;i++){
+        laptops[i].style.display="block";
+    }
+
+    var smartphones = document.getElementsByClassName("smartphone");
+    for(var i = 0;i<smartphones.length;i++){
+        smartphones[i].style.display="none";
+    }
+    
+});
+
+document.querySelector(".smartphone-card").addEventListener("click",function(){
+
+    for(card in cards){
+        if(cards[card]== "smartphone-card"){
+            document.querySelector("."+cards[card]).className = document.querySelector("."+cards[card]).className + " active-card";
+        }
+        else{
+            document.querySelector("."+cards[card]).className = document.querySelector("."+cards[card]).className.replace("active-card","")
+        }
+    }
+
+    var laptops = document.getElementsByClassName("laptop");
+    for(var i = 0;i<laptops.length;i++){
+        laptops[i].style.display="none";
+    }
+
+    var smartphones = document.getElementsByClassName("smartphone");
+    for(var i = 0;i<smartphones.length;i++){
+        smartphones[i].style.display="block";
+    }
+
+    
+
+    
+});

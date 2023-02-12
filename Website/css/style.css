@@ -362,13 +362,15 @@ td:hover {
 .product {
     position: relative;
     width: 260px;
-    height: 370px;
+    height: 460px;
     box-shadow: 0px 0px 20px 0px rgb(178, 176, 176);
     border-radius: 8px;
     padding: 10px;
 }
 .product-image {
     width: 100%;
+    aspect-ratio: 3/2;
+    object-fit: contain;
 }
 .add-to-cart {
     position: absolute;
@@ -381,7 +383,9 @@ td:hover {
     border-top-left-radius: 8px;
     border-top-right-radius: 8px;
 }
-
+.laptop{
+    display: none;
+}
 .product-name {
     margin-top: 20px;
     margin-left: 12px;

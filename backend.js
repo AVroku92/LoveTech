@@ -1,7 +1,13 @@
 //create server
+const { Console } = require("console");
 const express = require("express");
-const { validationResult, check } = require("express-validator");
+const { validationResult, check, Result } = require("express-validator");
+
+const path = require("path");
 const app = express();
+
+app.set("views",path.join(__dirname,"views"));
+app.set("view engine","ejs");
 
 let conatctFormValidation = getContactFormValidation();
 //method to read the body of post
@@ -9,6 +15,40 @@ app.use(express.urlencoded({extended:false}));
 
 //routing
 app.use("/", express.static("./Website")) //localhost:4000
+
+app.get("/Catagories",(req,res) =>{
+
+    const mysql = require("mysql2");
+    let mydb = mysql.createConnection({
+        host:'localhost',
+        user:'root',
+        password:'root',
+        port:'3306',
+        database:'accounts'
+    });
+        
+        
+        //sql command
+        let sql = "SELECT * FROM "+ "laptops";
+        
+        //execute sql command
+        mydb.query(sql,function(err,resultlaptops){
+
+            if(err) throw err;
+
+            //if no errors
+            let sql = "SELECT * FROM "+ "smartphones";
+            mydb.query(sql,function(err,resultphone){
+            console.log("Comment added to database");
+            
+
+            res.render("Catagories",{result1: resultlaptops,result2:resultphone});
+            });
+        });
+        
+        
+});
+    
 
 
 
